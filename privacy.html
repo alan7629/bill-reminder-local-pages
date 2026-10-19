@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BillReminder-Local 隱私權政策，說明 Gmail 和 Google 日曆資料存取、使用、儲存及刪除方式。">
+  <meta name="referrer" content="no-referrer">
+  <title>隱私權政策｜BillReminder-Local</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><nav class="container nav" aria-label="主要導覽"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">B</span>BillReminder-Local</a><div class="navlinks"><a href="./">返回首頁</a><a href="#english">English</a></div></nav></header>
+<main class="container">
+  <article class="article">
+    <p class="eyebrow">Privacy & Data Handling</p>
+    <h1>隱私權政策</h1>
+    <p class="lang">最後更新：2026 年 10 月 19 日｜適用於 BillReminder-Local 個人 Windows 桌面應用程式</p>
+    <p>本政策說明 BillReminder-Local 如何透過使用者授權的 Google API 存取、使用、儲存與分享資料。本網站只是靜態產品說明頁，不提供使用者登入，也不接收電子帳單上傳。</p>
+
+    <h2>1. 存取哪些 Google 使用者資料？</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>權限</th><th>實際用途</th></tr></thead>
+        <tbody>
+          <tr><td><code>gmail.readonly</code><br><span class="small">唯讀 Gmail</span></td><td>在使用者的 Gmail 中尋找與帳單相關的信件，讀取寄件人、標題、內容及相關 PDF 附件，以識別帳單及截止日期。此權限技術上可讀取整個信箱，程式只針對帳單類型處理。不會寄信、刪信或修改郵件。</td></tr>
+          <tr><td><code>calendar.events.owned</code><br><span class="small">本人日曆活動</span></td><td>查詢使用者擁有的 Google 日曆活動，避免重複提醒；建立或更新私人繳款截止日或待核對事項。日曆活動資料儲存在使用者的 Google 帳戶中。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h2>2. 資料如何使用？</h2>
+    <p>程式只會把郵件與附件內容用於辨識帳單、比對繳款金額與截止日、確認是否需要人工處理，以及建立或避免重複的 Google 日曆提醒。PDF 文字及解密內容原則上在本機記憶體處理，不把完整 PDF 或 Gmail 郵件正文傳到本網站。</p>
+    <p>尚未核實的金額或日期不會自動當成確定款項；如需銀行網站身分驗證或圖形驗證碼，由使用者自行在官方網站處理。程式不登入網路銀行、不執行付款。</p>
+
+    <h2>3. 資料儲存位置與保留</h2>
+    <ul>
+      <li><strong>Windows 本機：</strong>Google OAuth 授權權杖及使用者設定的 PDF 開啟密碼，以 Windows 使用者帳號對應的 DPAPI 加密，保存在本機使用者設定資料夾。</li>
+      <li><strong>本機作業紀錄：</strong>為避免重複處理，程式會儲存已處理郵件的識別碼、處理結果與必要的銀行類別資訊。本機執行日誌可能記錄發卡／帳單機構名稱、應繳金額、截止日、解析狀態及錯誤原因；這些紀錄不會發布於本網站。</li>
+      <li><strong>Google 日曆：</strong>新增的私人日曆事項可能包含機構名稱、金額、截止日、原始 Gmail 郵件連結及待核對資訊，以供使用者檢查。</li>
+      <li><strong>保留期間：</strong>本機設定及作業紀錄會留存至使用者自行刪除或解除安裝清理；日曆事項依使用者的 Google 日曆保留規則保存，直到使用者移除。</li>
+    </ul>
+
+    <h2>4. 資料分享與第三方</h2>
+    <p>BillReminder-Local 不販售 Google 使用者資料，不將 Gmail 內容用於廣告或訓練通用 AI 模型，也不將帳單資料上傳第三方 OCR 服務。僅為完成使用者要求的功能而與 Gmail／Google Calendar API 交換必要資料；資料在 Google 帳戶內的處理由 Google 的服務條款及隱私政策規範。</p>
+    <p>本靜態說明網站由 GitHub Pages 提供服務；本站未自行加入追蹤腳本、分析服務、廣告或收集資料的表單。GitHub 可能為網站傳輸與安全處理基本連線記錄。</p>
+    <p>除法律要求、使用者明確同意或提供本工具核心服務必須的情況外，不會向其他方揭露 Google 使用者資料。對 Google API 資料的使用遵守 Google API Services User Data Policy，包括其 Limited Use 規定。</p>
+
+    <h2>5. 安全措施</h2>
+    <p>工具採最小必要 OAuth 權限、Windows DPAPI 保護本機憑證、HTTPS 連線、寄件人與帳單欄位檢查，並以日曆去重減少誤建。原始 PDF、個人密碼與 OAuth 權杖不放入 GitHub 公開網站。任何自動辨識結果仍應與銀行正式帳單核對。</p>
+
+    <h2>6. 使用者選擇、撤銷及刪除</h2>
+    <ul>
+      <li>可至 <a href="https://myaccount.google.com/connections" rel="noopener noreferrer">Google 帳戶的第三方連線設定</a>撤銷 BillReminder-Local 的授權，停止未來透過該授權取得資料。</li>
+      <li>可在 Windows 本機刪除 BillReminder-Local 的授權檔、加密密碼庫、處理狀態與日誌；請先停止每日排程，避免再次執行。</li>
+      <li>已寫入 Google 日曆的事項不會因撤銷 Gmail 授權自動消失；如需刪除，請到自己的 Google 日曆移除。</li>
+    </ul>
+
+    <h2>7. 聯絡方式與變更</h2>
+    <p>如對本工具或 Google 使用者資料處理有疑問，請聯絡 <a href="mailto:alan7629@gmail.com">alan7629@gmail.com</a>。若資料使用方式或權限有所更動，本頁會更新說明與日期；擴大權限會依 Google OAuth 機制再次取得授權。</p>
+
+    <section id="english" lang="en" aria-labelledby="eng-title">
+      <h2 id="eng-title">English privacy summary</h2>
+      <p>BillReminder-Local is a personal Windows desktop bill-reminder application. With the user's authorization it uses <code>gmail.readonly</code> to read billing messages and PDF attachments, and <code>calendar.events.owned</code> to check, create and update reminders in calendars the user owns. It does not send or delete email, perform banking transactions, or solve bank CAPTCHAs.</p>
+      <p>PDF text is processed locally. OAuth tokens and optional PDF-opening passwords are encrypted with Windows DPAPI; local state and logs may include processed Gmail message identifiers, bill issuers, amounts, due dates and processing results. Private Google Calendar events may contain payment metadata and Gmail source links. Records remain until the user removes them.</p>
+      <p>The app does not sell Google user data, use it for advertising, send it to third-party OCR platforms, or train general-purpose AI models. It uses Google data only for the explicitly requested billing-reminder functionality, consistent with Google's Limited Use rules. This GitHub Pages information site has no custom analytics, advertising scripts or submission forms.</p>
+      <p>Users can revoke OAuth access at <a href="https://myaccount.google.com/connections" rel="noopener noreferrer">Google Account connections</a>, remove local credentials and processing records, and separately delete Google Calendar events. For privacy questions contact <a href="mailto:alan7629@gmail.com">alan7629@gmail.com</a>.</p>
+    </section>
+  </article>
+</main>
+<footer class="footer"><div class="container foot"><span>© 2026 BillReminder-Local</span><span><a href="./">應用程式首頁 / Home</a></span></div></footer>
+</body>
+</html>

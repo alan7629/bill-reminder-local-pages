@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BillReminder-Local：在個人 Windows 電腦上讀取 Gmail 電子帳單、核對 PDF、建立 Google 日曆繳款提醒的私人自用桌面工具。">
+  <meta name="referrer" content="no-referrer">
+  <title>BillReminder-Local｜本機電子帳單提醒工具</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <nav class="container nav" aria-label="主要導覽">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">B</span>BillReminder-Local</a>
+    <div class="navlinks"><a href="#features">功能介紹</a><a href="privacy.html">隱私權政策</a><a href="#terms">使用條款</a></div>
+  </nav>
+</header>
+<main class="container">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="eyebrow">Private Windows Utility · 個人自用</div>
+    <h1 id="hero-title">讓繳款日期不再遺漏，<br>帳單資料留在自己的電腦。</h1>
+    <p>BillReminder-Local 是個人 Windows 桌面帳單提醒工具。經使用者授權後，從 Gmail 讀取電子帳單通知及相關 PDF，在本機核對應繳金額和日期，再於使用者自己的 Google 日曆建立提醒。</p>
+    <p class="notice"><strong>這不是銀行或付款服務。</strong>工具不會登入網路銀行、移轉資金或代替使用者繳款；資訊不確定時會標記「待核對」。此工具與 Google 或任何銀行均無隸屬關係。</p>
+  </section>
+  <section id="features" class="section" aria-labelledby="feature-title">
+    <h2 id="feature-title">主要功能</h2>
+    <div class="grid">
+      <article class="card"><h3>讀取電子帳單</h3><p>透過 Gmail 唯讀授權篩選可能的銀行、電信和生活帳單，並在本機處理可讀取的 PDF 附件。</p></article>
+      <article class="card"><h3>核對金額與期限</h3><p>使用文字、表格座標及必要的本機 OCR 核實繳款資訊。加密失敗或資料不足時改列待核對，不憑空推算。</p></article>
+      <article class="card"><h3>建立日曆提醒</h3><p>在使用者擁有的 Google 日曆建立私人事項，通常於截止前三天提醒；確認已存在的事項後避免重複。</p></article>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="flow-title">
+    <h2 id="flow-title">如何運作</h2>
+    <ol class="steps">
+      <li>使用者在自己的 Windows 電腦安裝工具，透過 Google OAuth 授權 Gmail 唯讀與本人日曆活動管理。</li>
+      <li>程式篩選帳單信件、讀取附件，在本機核實金額和期限；PDF 開啟密碼使用 Windows DPAPI 保護。</li>
+      <li>對可確認的帳單新增日曆提醒；對缺失資料、逾期、疑似自動扣款或需要網站驗證者，保留人工核對。</li>
+    </ol>
+    <p class="small subtle">部分金融機構的網頁帳單需要使用者親自完成人機驗證，再匯入下載的 PDF；工具不繞過 CAPTCHA。</p>
+  </section>
+  <section class="section" id="terms">
+    <div class="plain">
+      <h2>使用條款與限制</h2>
+      <p>本工具僅供私人管理帳單提醒使用，依現況提供，無法保證郵件、銀行 PDF 格式、日期辨識或 Google API 持續可用。付款義務、是否已扣款及正確截止日，均應以銀行或帳單發行機構正式紀錄為準。</p>
+      <p>使用者自行決定是否授權 Google 資料存取，並可隨時撤銷授權。本工具不提供金融建議、不代表任何銀行，也不負責執行付款。</p>
+      <p><strong>如何使用及保護資料：</strong>請閱讀 <a href="privacy.html">隱私權政策</a>。需要協助或詢問資料處理方式，可寄信至 <a href="mailto:alan7629@gmail.com">alan7629@gmail.com</a>。</p>
+    </div>
+  </section>
+  <section class="section" aria-label="English summary">
+    <div class="callout"><strong>English summary</strong><p>BillReminder-Local is a personal Windows desktop utility that, with user authorization, reads billing emails and PDFs through the Gmail read-only API, checks payable amounts and due dates locally, and creates private reminders in the user's Google Calendar. It does not make payments or bypass bank verification. Read the <a href="privacy.html#english">English privacy summary</a>.</p></div>
+  </section>
+</main>
+<footer class="footer"><div class="container foot"><span>© 2026 BillReminder-Local · Personal desktop utility</span><span><a href="privacy.html">隱私權政策 / Privacy</a>　·　<a href="#terms">使用條款 / Terms</a></span></div></footer>
+</body>
+</html>
